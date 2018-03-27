@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1591201485286568}
+  m_IsPrefabParent: 1
+--- !u!1 &1591201485286568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4334166829192468}
+  - component: {fileID: 114931049448751760}
+  m_Layer: 0
+  m_Name: CrateExplosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4334166829192468
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591201485286568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0601416, y: 0.029810246, z: 0.026822783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114931049448751760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591201485286568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb249510c5965480b977675d8084df32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cratePieces:
+  - {fileID: 1882403237013240, guid: 81deeb59b9af54ed183da6dc1145c019, type: 2}
+  - {fileID: 1603219983363068, guid: 7f355caa2475a4ed4aac3e143add7fee, type: 2}
+  - {fileID: 1585069039160014, guid: 4e23f0b1daa3740da99d1d68335d61e7, type: 2}
+  - {fileID: 1700088341011748, guid: 054274203086a49789e8018eb2cfa28d, type: 2}
+  - {fileID: 1700446459629640, guid: f59e4ea6b64364d668cfe7048a04e895, type: 2}
+  - {fileID: 1176514270166788, guid: ed77587a5bffe43fd8e4aa23e55a224e, type: 2}
+  speed: 50
