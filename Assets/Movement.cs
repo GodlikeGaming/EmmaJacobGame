@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour {
 	Rigidbody2D rb;
 	public float speed = 100f;
 	public float MAXIMUM_SPEED = 10f;
+	public float speedModifier = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +25,19 @@ public class Movement : MonoBehaviour {
 
 		if ((rb.velocity + velocity).magnitude < MAXIMUM_SPEED) {
 			
-			transform.position = Vector2.MoveTowards(transform.position, (Vector2) transform.position + velocity, speed * Time.deltaTime);
+			transform.position = Vector2.MoveTowards(transform.position, (Vector2) transform.position + velocity, speedModifier*speed * Time.deltaTime);
 			//rb.position = (Vector2) transform.position + velocity * speed * Time.deltaTime;
 		}
+	}
+	public void modifySpeed (float mod, float duration){
+		StartCoroutine (modify (mod, duration));
+	}
+	IEnumerator modify(float mod, float duration)
+	{
+		speedModifier = mod * speedModifier;
+		Debug.Log ("slow");
+		yield return new WaitForSeconds(duration);
+		speedModifier = speedModifier / mod;
+		Debug.Log ("fast");
 	}
 }
