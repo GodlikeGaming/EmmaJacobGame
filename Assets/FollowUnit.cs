@@ -17,6 +17,8 @@ public class FollowUnit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (unit == null)
+			Destroy (this.gameObject);
 		transform.position = (Vector2) unit.transform.position + offset;
 		img.fillAmount = unit.GetComponent<Unit>().HP / unit.GetComponent<Unit> ().maxHP;
 	}
