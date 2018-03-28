@@ -8,9 +8,7 @@ public class Unit : MonoBehaviour {
 	public float HP = 100;
 	public GameObject ExplosionUnit;
 	public GameObject web; 
-
 	public GameObject coin;
-
 	public GameObject healthBar;
 	///public 
 
