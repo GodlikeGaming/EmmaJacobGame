@@ -12,7 +12,8 @@ public class FollowPlayer : MonoBehaviour {
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 	void Update() {
-		Vector3 targetPosition = target.TransformPoint(new Vector3(0, 0, -10));
+		Vector3 targetPosition = target.transform.position;
+		targetPosition.z = -10;
 		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 	}
 }

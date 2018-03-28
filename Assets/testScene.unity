@@ -672,7 +672,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 637445905
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &376834666
@@ -810,6 +810,7 @@ MonoBehaviour:
   HP: 10000
   ExplosionUnit: {fileID: 0}
   web: {fileID: 0}
+  coin: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!114 &431174786
 MonoBehaviour:
@@ -1096,6 +1097,7 @@ MonoBehaviour:
   HP: 10000
   ExplosionUnit: {fileID: 0}
   web: {fileID: 0}
+  coin: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!114 &555898528
 MonoBehaviour:
@@ -1271,11 +1273,11 @@ GameObject:
   - component: {fileID: 640637477}
   m_Layer: 9
   m_Name: Spider (3)
-  m_TagString: Untagged
+  m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &640637477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1292,8 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   ExplosionUnit: {fileID: 0}
-  web: {fileID: 0}
+  web: {fileID: 1724018518274556, guid: 1cab56094d6dc4732934ba3d2c00515d, type: 2}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!61 &640637478
 BoxCollider2D:
@@ -1515,7 +1518,7 @@ GameObject:
   - component: {fileID: 793253350}
   m_Layer: 9
   m_Name: crate
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1618,6 +1621,7 @@ MonoBehaviour:
   ExplosionUnit: {fileID: 1591201485286568, guid: b6eead9b62cc1458385064510afe7205,
     type: 2}
   web: {fileID: 0}
+  coin: {fileID: 1261236212102308, guid: d97b597d6dbf4496986643063b539c99, type: 2}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!1 &795570262
 GameObject:
@@ -1632,7 +1636,7 @@ GameObject:
   - component: {fileID: 795570266}
   m_Layer: 9
   m_Name: crate (3)
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1735,6 +1739,7 @@ MonoBehaviour:
   ExplosionUnit: {fileID: 1591201485286568, guid: b6eead9b62cc1458385064510afe7205,
     type: 2}
   web: {fileID: 0}
+  coin: {fileID: 1261236212102308, guid: d97b597d6dbf4496986643063b539c99, type: 2}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!1 &952133151
 GameObject:
@@ -1898,11 +1903,11 @@ GameObject:
   - component: {fileID: 1019237392}
   m_Layer: 9
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1019237386
 Animator:
   serializedVersion: 3
@@ -2054,7 +2059,8 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   ExplosionUnit: {fileID: 0}
-  web: {fileID: 0}
+  web: {fileID: 1724018518274556, guid: 1cab56094d6dc4732934ba3d2c00515d, type: 2}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!1 &1104890828
 GameObject:
@@ -2332,6 +2338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   MAXIMUM_SPEED: 10
+  rollSpeed: 5000
+  startTime: 0
+  rollCooldown: 0
 --- !u!61 &1166644480
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2371,6 +2380,7 @@ MonoBehaviour:
   laserEffect: {fileID: 1653665754717566, guid: 1963caa3694074aaea08888f1e432f39,
     type: 2}
   laserDamage: 4
+  laserRange: 10
 --- !u!120 &1166644482
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2474,6 +2484,7 @@ MonoBehaviour:
   HP: 100
   ExplosionUnit: {fileID: 0}
   web: {fileID: 0}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!1 &1261612109
 GameObject:
@@ -2639,7 +2650,7 @@ GameObject:
   - component: {fileID: 1439553281}
   m_Layer: 9
   m_Name: crate (1)
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2742,6 +2753,7 @@ MonoBehaviour:
   ExplosionUnit: {fileID: 1591201485286568, guid: b6eead9b62cc1458385064510afe7205,
     type: 2}
   web: {fileID: 0}
+  coin: {fileID: 1261236212102308, guid: d97b597d6dbf4496986643063b539c99, type: 2}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!1 &1500699621
 GameObject:
@@ -2754,7 +2766,7 @@ GameObject:
   - component: {fileID: 1500699622}
   - component: {fileID: 1500699624}
   - component: {fileID: 1500699625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: treasureChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2829,10 +2841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32597110cae0e495ca5ec3e92638a714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 200
-  HP: 200
+  maxHP: 300
+  HP: 300
   ExplosionUnit: {fileID: 0}
   web: {fileID: 0}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!61 &1500699625
 BoxCollider2D:
@@ -2875,11 +2888,11 @@ GameObject:
   - component: {fileID: 1519109586}
   m_Layer: 9
   m_Name: Spider (1)
-  m_TagString: Untagged
+  m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1519109586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,7 +2907,8 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   ExplosionUnit: {fileID: 0}
-  web: {fileID: 0}
+  web: {fileID: 1724018518274556, guid: 1cab56094d6dc4732934ba3d2c00515d, type: 2}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!61 &1519109587
 BoxCollider2D:
@@ -3149,6 +3163,7 @@ MonoBehaviour:
   HP: 10000
   ExplosionUnit: {fileID: 0}
   web: {fileID: 0}
+  coin: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!114 &1585241705
 MonoBehaviour:
@@ -3178,11 +3193,11 @@ GameObject:
   - component: {fileID: 1650790054}
   m_Layer: 9
   m_Name: Spider (2)
-  m_TagString: Untagged
+  m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1650790054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,7 +3212,8 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   ExplosionUnit: {fileID: 0}
-  web: {fileID: 0}
+  web: {fileID: 1724018518274556, guid: 1cab56094d6dc4732934ba3d2c00515d, type: 2}
+  coin: {fileID: 0}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}
 --- !u!61 &1650790055
 BoxCollider2D:
@@ -3892,7 +3908,7 @@ GameObject:
   - component: {fileID: 2079907911}
   m_Layer: 9
   m_Name: crate (2)
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3995,4 +4011,5 @@ MonoBehaviour:
   ExplosionUnit: {fileID: 1591201485286568, guid: b6eead9b62cc1458385064510afe7205,
     type: 2}
   web: {fileID: 0}
+  coin: {fileID: 1261236212102308, guid: d97b597d6dbf4496986643063b539c99, type: 2}
   healthBar: {fileID: 1549410543425252, guid: 779909b0531a34b86a777f64e2b61a38, type: 2}

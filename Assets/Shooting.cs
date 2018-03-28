@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour {
 	LineRenderer lr;
 	public GameObject laserEffect;
 	public float laserDamage = 5f;
+	public float laserRange = 10f;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,7 @@ public class Shooting : MonoBehaviour {
 				DrawLaser (hit.point);
 				hit.transform.GetComponent<Unit> ().TakeDamage (laserDamage);
 			} else {
+				//Vector2 position = (Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position).normalized * laserRange;
 				DrawLaser (Camera.main.ScreenToWorldPoint (Input.mousePosition));
 			}
 		} else {

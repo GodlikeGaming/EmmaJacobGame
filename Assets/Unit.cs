@@ -15,8 +15,10 @@ public class Unit : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameObject canvas = GameObject.Find("Canvas");
-		GameObject temp = Instantiate (healthBar, canvas.transform) as GameObject;
-		temp.GetComponent<FollowUnit> ().unit = this.gameObject;
+		if (healthBar != null) {
+			GameObject temp = Instantiate (healthBar, canvas.transform) as GameObject;
+			temp.GetComponent<FollowUnit> ().unit = this.gameObject;
+		}
 	}
 	
 
@@ -33,8 +35,10 @@ public class Unit : MonoBehaviour {
 	{
 		if (this.tag.Equals("Spider"))
 			Instantiate (web, transform.position, Quaternion.identity);
-		if (this.tag.Equals("Crate"))
-			Instantiate (coin, transform.position, Quaternion.identity);
+		if (this.tag.Equals ("Crate")) {
+			for (int i = 0; i < 6; i++)
+				Instantiate (coin, (Vector2) transform.position + new Vector2(Random.Range(-0.25f,0.25f), Random.Range(-0.25f,0.25f)), Quaternion.identity);
+		}
 		if (ExplosionUnit != null)
 			Instantiate (ExplosionUnit, transform.position, Quaternion.identity);
 		Destroy (this.gameObject);
