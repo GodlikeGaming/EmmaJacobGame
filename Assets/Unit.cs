@@ -7,6 +7,7 @@ public class Unit : MonoBehaviour {
 	public float maxHP = 100;
 	public float HP = 100;
 	public GameObject ExplosionUnit;
+	public GameObject web; 
 	// Use this for initialization
 	void Start () {
 		
@@ -24,6 +25,8 @@ public class Unit : MonoBehaviour {
 
 	void Explosion()
 	{
+		if (this.tag.Equals("Spider"))
+			Instantiate (web, transform.position, Quaternion.identity);
 		if (ExplosionUnit != null)
 			Instantiate (ExplosionUnit, transform.position, Quaternion.identity);
 		Destroy (this.gameObject);

@@ -39,6 +39,7 @@ public class EnemyMovement : MonoBehaviour {
 		float fracJourney = distCovered / journeyLength;
 		rb.velocity = Vector3.Lerp(rb.velocity, Vector2.zero, fracJourney);
 
+
 		// LOOK AT PLAYER
 
 	}
@@ -73,6 +74,12 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		Debug.Log (col.gameObject.name);
 		if (col.gameObject.tag.Equals ("Player"))
-			player.GetComponent<Unit> ().TakeDamage (enemyDamage);
+			player.GetComponent<Unit> ().TakeDamage (enemyDamage); {
+
+		}
+
+
 	}
+
+
 }
