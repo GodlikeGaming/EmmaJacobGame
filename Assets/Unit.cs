@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour {
 
+	public float maxHP = 100;
 	public float HP = 100;
 	public GameObject ExplosionUnit;
 	// Use this for initialization
